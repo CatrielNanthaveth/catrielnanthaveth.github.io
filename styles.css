@@ -78,6 +78,10 @@ html {
     text-decoration: none;
     color: #001427;
   }
+  a:hover {
+    background-color: #8D0801;
+    color: #F4D58D;
+  }
   
   img {
     display: block;
