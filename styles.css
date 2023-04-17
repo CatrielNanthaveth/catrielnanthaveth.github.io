@@ -1,14 +1,27 @@
-/* .raise:hover,
-.raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-} */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Playfair Display', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.link {
+    color: black;
+    text-decoration: none;
+}
 
 body {
     margin: 0;
     padding: 0;
     position: absolute;
     top: 4em;
+    width: 100%;
 }
 
 #header-list {
@@ -27,21 +40,33 @@ body {
     top: 0;
 }
 
-.section {
+section {
     height: calc(100vh - 4em);
-    width: 100vw;
 }
 
-.home {
-    background-color: antiquewhite;
+
+#home {
+    background-color: rgb(0, 167, 145);
 }
 
-.projects {
-    background-color: aquamarine;
+#technologies {
+    background-color: rgb(0, 126, 84);
 }
 
 
 @media screen and (min-width: 1024px) {
+
+    .link:hover {
+        transition: 1s;
+        color: #fff700;
+    }
+
+    .raise:hover,
+    .raise:focus {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
+    }
+
 
     /* reglas de CSS para el header */
 
@@ -62,10 +87,6 @@ body {
         padding: 5px 20px;
     }
 
-    .nav-link:hover {
-        transition: 1s;
-        color: #fff700;
-    }
 
     .nav-link:before,
     .nav-link:after {
@@ -99,7 +120,69 @@ body {
 
     /* reglas de CSS para el home */
 
-    .home {
-        background-color: antiquewhite;
+
+    #home {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
     }
+
+    #home-image {
+        height: 50vh;
+    }
+
+    #home-art {
+        display: flex;
+        margin: auto 20px auto auto;
+    }
+
+    #presentation {
+        display: flex;
+        flex-direction: column;
+        width: 60vh;
+        margin: auto auto auto 20px;
+    }
+
+    #home h1,
+    #home h4,
+    #home p {
+        color: #cec700;
+        font-size: large;
+        margin: 10px;
+    }
+
+    #home h1 {
+        font-size: xx-large;
+    }
+
+    #icons {
+        margin: 20px 10px;
+        display: flex;
+        gap: 20px;
+    }
+
+    /* reglas de CSS para technologies */
+
+    #technologies {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 5em;
+        justify-content: center;
+    }
+    #technologies > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #technologies h1,
+    #technologies h4,
+    #technologies p {
+        color: #cec700;
+        font-size: large;
+        margin: 10px;
+    }
+
 }
