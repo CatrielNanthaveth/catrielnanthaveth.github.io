@@ -68,6 +68,8 @@ a:any-link {
         color: #fff700;
     }
 
+
+
     .raise:hover,
     .raise:focus {
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
@@ -245,5 +247,9 @@ a:any-link {
         width: 100%;
     }
 
+    .project:hover > a > p {
+        transition: 1s;
+        color: #fff700 !important;
+    }
 
 }
