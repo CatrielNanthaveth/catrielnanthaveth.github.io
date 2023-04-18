@@ -53,6 +53,13 @@ section {
     background-color: rgb(0, 126, 84);
 }
 
+#projects {
+    background-color: rgb(0, 126, 4);
+}
+
+a:any-link {
+    text-decoration: none;
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -65,6 +72,15 @@ section {
     .raise:focus {
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
         transform: translateY(-0.25em);
+        transition: 0.5s;
+    }
+
+    .show{
+        display: none;
+    }
+
+    .raise:hover .show {
+        display: block;
     }
 
 
@@ -184,5 +200,50 @@ section {
         font-size: large;
         margin: 10px;
     }
+
+    /* reglas de CSS para projects */
+
+    #projects {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #projects > div {
+        padding-top: 15vh;
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+    }
+
+    #projects > div > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #projects h1,
+    #projects h4,
+    #projects p {
+        color: #cec700;
+        font-size: large;
+        margin: 10px;
+    }
+
+    .small {
+        font-size: small !important;
+        width: 40vw;
+    }
+
+    .project img {
+        width: 15em;
+        height: 15em;
+        object-fit: cover;
+    }
+
+    .raise:hover img {
+        width: 100%;
+    }
+
 
 }
