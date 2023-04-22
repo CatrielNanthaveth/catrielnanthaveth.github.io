@@ -21,6 +21,9 @@
                 <a href="#home" class="nav-link link">Inicio</a>
             </li>
             <li class="nav-list">
+                <a href="#education" class="nav-link link">Educación</a>
+            </li>
+            <li class="nav-list">
                 <a href="#technologies" class="nav-link link">Tecnologías</a>
             </li>
             <li class="nav-list">
@@ -33,10 +36,10 @@
     </header>
 
     <section id="home">
-        <article id="home-art">
+        <div id="home-art">
             <img src="./resources/avatar_transparente.png" alt="imagen home" id="home-image">
-        </article>
-        <article id="presentation">
+        </div>
+        <div id="presentation">
             <h1 id="presentation-title">Catriel Nanthaveth</h1>
             <h4 id="presentation-subtitle"><i>Desarrollador Web | Estudiante de Informática</i></h4>
             <p id="presentation-text">
@@ -56,7 +59,42 @@
                     <i class="fa-regular fa-file fa-2xl"></i>
                 </a>
             </div>
-        </article>
+        </div>
+    </section>
+
+    <section id="education">
+        <h1>Educación</h1>
+
+        <div id="cards">
+            <article class="card">
+                <h2>Universidad Nacional del Oeste | Marzo 2021 - Presente</h2>
+                <article class="card-info">
+                    <p>Lic. en Informática</p>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1DFkDl9nm-FCSDO-U11OGktZ0a03P9fLSZm6E57gVRlo/edit#gid=0">Progreso
+                        Universitario</a>
+                    <p></p>
+                </article>
+            </article>
+
+            <article class="card">
+                <h2>Universidad Siglo 21 | Septiembre 2022 - Diciembre 2022</h2>
+                <article class="card-info">
+                    <p>React.js</p>
+                    <p>Enfocado en React.js y bibliotecas para el desarrollo front-end. Desarrollé una landing page para
+                        una ONG ficticia con un equipo de trabajo basado en Scrum.</p>
+                </article>
+            </article>
+
+            <article class="card">
+                <h2>FREECODECAMP | Abril 2022 - Agosto 2022</h2>
+                <article class="card-info">
+                    <p>Responsive Web Design - Aprendí HTML + CSS responsivo.</p>
+                    <p>JavaScript Algorithms and Data Structures - Aprendí JavaScript y resolví algoritmos.</p>
+                    <p>Front End Development Libraries - Aprendí React.js y otras bibliotecas.</p>
+                </article>
+            </article>
+        </div>
     </section>
 
     <section id="technologies">
@@ -64,54 +102,59 @@
         <h1>Tengo conocimientos en los siguientes tecnologías.</h1>
 
         <div>
-            <div>
+            <article>
                 <i class="fa-brands fa-react fa-2xl" style="color: #cec700;"></i>
                 <p>React.js</p>
-            </div>
-            <div>
+            </article>
+            <article>
                 <i class="fa-brands fa-js fa-2xl" style="color: #cec700;"></i>
                 <p>Javascript</p>
-            </div>
-            <div>
+            </article>
+            <article>
                 <i class="fa-brands fa-html5 fa-2xl" style="color: #cec700;"></i>
                 <p>HTML5</p>
-            </div>
-            <div>
+            </article>
+            <article>
                 <i class="fa-brands fa-css3-alt fa-2xl" style="color: #cec700;"></i>
                 <p>CSS3</p>
-            </div>
-            <div>
+            </article>
+            <article>
+                <i class="fa-brands fa-bootstrap fa-2xl" style="color: #cec700;"></i>
+                <p>Bootstrap</p>
+            </article>
+            <article>
                 <i class="fa-brands fa-java fa-2xl" style="color: #cec700;"></i>
                 <p>Java</p>
-            </div>
-            <div>
+            </article>
+            <article>
                 <i class="fa-brands fa-python fa-2xl" style="color: #cec700;"></i>
                 <p>Python</p>
-            </div>
-            <div>
+            </article>
+            <article>
                 <i class="fa-brands fa-git-alt fa-2xl" style="color: #cec700;"></i>
                 <p>Git</p>
-            </div>
-            <div>
+            </article>
+            <article>
                 <i class="fa-brands fa-jira fa-2xl" style="color: #cec700;"></i>
                 <p>Jira</p>
-            </div>
+            </article>
         </div>
-        <p><i>(además de experiencia trabajando con Agile, y nivel B2 de inglés)</i></p>
+        <p><i>(además de experiencia trabajando con Agile)</i></p>
 
     </section>
 
     <section id="projects">
         <div>
             <h1>Estos son algunos de mis proyectos.</h1>
-    
+
             <div id="project-gallery">
                 <div class="raise project">
                     <a href="https://github.com/CatrielNanthaveth/UNO/tree/main/Pong" target="_blank">
                         <img src="./resources/pong.png" alt="proyecto ">
                         <p>Pong! con Pygame</p>
                         <p class="small show">
-                            Videojuego desarrollado para la materia de Programación Orientada a Objetos II, realizado con Python y la librería Pygame.
+                            Videojuego desarrollado para la materia de Programación Orientada a Objetos II, realizado
+                            con Python y la librería Pygame.
                         </p>
                     </a>
                 </div>
@@ -120,7 +163,8 @@
                         <img src="./resources/rqm.png" alt="proyecto ">
                         <p>Random Quote Machine</p>
                         <p class="small show">
-                            Proyecto realizado por mi cuenta cómo práctica de JavaScript. Realiza una llamada a la API y trae una cita al frontend.
+                            Proyecto realizado por mi cuenta cómo práctica de JavaScript. Realiza una llamada a la API y
+                            trae una cita al frontend.
                         </p>
                     </a>
                 </div>
@@ -129,7 +173,9 @@
                         <img src="./resources/somosmas.png" alt="proyecto ">
                         <p>Somos Más</p>
                         <p class="small show">
-                            Sitio Web creado durante un bootcamp intensivo de React.JS dictado por la Universidad Siglo 21. Se utilizaron tecnologías como Javascript, React.JS, Redux, SaSS, etc.. Se utilizó la metodología Scrum para trabajar en un equipo de 5 personas + Scrum Master.
+                            Sitio Web creado durante un bootcamp intensivo de React.JS dictado por la Universidad Siglo
+                            21. Se utilizaron tecnologías como Javascript, React.JS, Redux, SaSS, etc.. Se utilizó la
+                            metodología Scrum para trabajar en un equipo de 5 personas + Scrum Master.
                         </p>
                     </a>
                 </div>
@@ -147,6 +193,45 @@
 
     </section>
 
+    <section id="contact">
+        <h1>¡Contactémonos!</h1>
+        <section id="contact-info">
+            <div class="contact-card">
+                <h2>Si querés que me contacte con vos...</h2>
+                <form>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="mail">Correo Electrónico:</label>
+                    <input type="email" id="mail" name="mail">
+                    <label for="phone">Número de teléfono:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <input type="submit" id="submit">
+                </form>
+            </div>
+    
+            <div class="contact-card">
+                <h2>Si querés contactarme vos a mí...</h2>
+                <section id="contact-me">
+                    <article>
+                        <h4>Nombre <i class="fa-solid fa-user-tie"></i></h4>
+                        <p>Catriel Nanthaveth</p>
+                    </article>
+    
+                    <article>
+                        <h4>Correo electrónico <i class="fa-solid fa-envelope"></i></h4>
+                        <p>catriel_nanthaveth@hotmail.com</p>
+                        <a href="mailto:catriel_nanthaveth@hotmail.com"><p>Click acá para enviarme un email.</p></a>
+                    </article>
+    
+                    <article>
+                        <h4>Número de teléfono <i class="fa-brands fa-whatsapp"></i></h4>
+                        <p>1128813660</p>
+                        <a href="https://api.whatsapp.com/send?phone=541128813660"><p>Click acá para enviarme un WhatsApp.</p></a>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </section>
 
 </body>
 

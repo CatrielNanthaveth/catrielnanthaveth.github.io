@@ -11,6 +11,7 @@ p {
 html {
     scroll-behavior: smooth;
 }
+
 .link {
     color: black;
     text-decoration: none;
@@ -40,13 +41,16 @@ body {
     top: 0;
 }
 
-section {
+body > section {
     height: calc(100vh - 4em);
 }
 
-
 #home {
     background-color: rgb(0, 167, 145);
+}
+
+#education {
+    background-color: rgb(25, 167, 0);
 }
 
 #technologies {
@@ -57,8 +61,22 @@ section {
     background-color: rgb(0, 126, 4);
 }
 
+#contact {
+    background-color: rgb(0, 90, 126);
+}
+
 a:any-link {
     text-decoration: none;
+}
+
+section h1,
+section h2,
+section h3,
+section h4,
+section p {
+    color: #cec700;
+    font-size: large;
+    margin: 10px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -77,7 +95,7 @@ a:any-link {
         transition: 0.5s;
     }
 
-    .show{
+    .show {
         display: none;
     }
 
@@ -162,13 +180,6 @@ a:any-link {
         margin: auto auto auto 20px;
     }
 
-    #home h1,
-    #home h4,
-    #home p {
-        color: #cec700;
-        font-size: large;
-        margin: 10px;
-    }
 
     #home h1 {
         font-size: xx-large;
@@ -180,6 +191,41 @@ a:any-link {
         gap: 20px;
     }
 
+    /* reglas de CSS para education */
+
+    #education {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 5em;
+        justify-content: center;
+    }
+
+    #cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        min-width: 20vw;
+        max-width: 40vw;
+        margin: 0 50px 0 50px;
+        border: solid #cec700 2px;
+    }
+
+    .card:hover {
+        box-shadow: 0px 0px 50px teal;
+        transition: 0.5s;
+    }
+
+    .card-info>a:any-link {
+        color: #cec700;
+    }
+
+
     /* reglas de CSS para technologies */
 
     #technologies {
@@ -189,19 +235,13 @@ a:any-link {
         gap: 5em;
         justify-content: center;
     }
-    #technologies > div {
+
+    #technologies>div {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    #technologies h1,
-    #technologies h4,
-    #technologies p {
-        color: #cec700;
-        font-size: large;
-        margin: 10px;
-    }
 
     /* reglas de CSS para projects */
 
@@ -211,26 +251,19 @@ a:any-link {
         text-align: center;
     }
 
-    #projects > div {
+    #projects>div {
         padding-top: 15vh;
         display: flex;
         flex-direction: column;
         gap: 5em;
     }
 
-    #projects > div > div {
+    #projects>div>div {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    #projects h1,
-    #projects h4,
-    #projects p {
-        color: #cec700;
-        font-size: large;
-        margin: 10px;
-    }
 
     .small {
         font-size: small !important;
@@ -247,9 +280,76 @@ a:any-link {
         width: 100%;
     }
 
-    .project:hover > a > p {
+    .project:hover>a>p {
         transition: 1s;
         color: #fff700 !important;
+    }
+
+    /* reglas de CSS para technologies */
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .contact-card {
+        border: solid #fff700;
+        background-color: rgb(0, 90, 126);
+        width: 40vw;
+        padding-top: 40px;
+        margin: 2em;
+    }
+
+    .contact-card:hover {
+        box-shadow: 0px 0px 30px rgb(25, 9, 26);
+        transition: 0.5s;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+        gap: 20px;
+    }
+    
+    label {
+        color: #cec700;
+    }
+    
+    input {
+        border-radius: 5px;
+        border-color: #e0e0e0;
+        background-color: #fafafa;
+    }
+
+    #submit {
+        background-color: #cec700;
+        padding: 5px 15px 5px 15px;
+    }
+
+    #submit:hover {
+        background-color: #cec700;
+        padding: 10px 25px 10px 25px;
+        box-shadow: 0px 0px 10px rgb(25, 9, 26);
+        transition: 0.5s;
+    }
+
+    #contact-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    #contact-me {
+        padding-top: 2em;
     }
 
 }
