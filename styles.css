@@ -41,7 +41,7 @@ body {
     top: 0;
 }
 
-body > section {
+body>section {
     height: calc(100vh - 4em);
 }
 
@@ -77,6 +77,223 @@ section p {
     color: #cec700;
     font-size: large;
     margin: 10px;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .link:hover {
+        transition: 1s;
+        color: #fff700;
+    }
+
+    .raise:hover,
+    .raise:focus {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
+        transition: 0.5s;
+    }
+
+    .show {
+        display: none;
+    }
+
+    .raise:hover .show {
+        display: block;
+    }
+
+
+    body>section {
+        min-height: calc(100vh - 4em);
+        height: 100%;
+    }
+
+    /* reglas de CSS para el header */
+
+    #header-list {
+        flex-flow: wrap;
+        justify-content: center;
+    }
+
+    .nav-list {
+        padding-right: 2em;
+        font-size: medium;
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        color: #cec700;
+        text-decoration: none;
+
+    }
+
+    img {
+        width: 100px;
+    }
+
+    /* reglas de CSS para el home */
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #home-art {
+        display: flex;
+        justify-content: center;
+        padding-top: 5vh;
+    }
+
+    #home-image {
+        width: 30vh;
+    }
+
+    #presentation {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* reglas de CSS para education */
+
+    #education {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+        padding: 2em;
+    }
+
+    #cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+    }
+
+    .card {
+
+        border: solid #cec700 2px;
+    }
+
+    .card:hover {
+        box-shadow: 0px 0px 50px teal;
+        transition: 0.5s;
+    }
+
+    .card-info>a:any-link {
+        color: #cec700;
+    }
+
+
+    /* reglas de CSS para technologies */
+
+    #technologies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2em;
+    }
+
+    #technologies>div {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-evenly;
+        gap: 2em;
+    }
+
+    /* reglas de CSS para projects */
+
+    #projects {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    #projects>div {
+        display: flex;
+        flex-direction: column;
+        gap: 5em;
+    }
+
+    #projects>div>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 2em;
+    }
+
+    /* reglas de CSS para technologies */
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 2em 0 2em 0;
+    }
+
+    .contact-card {
+        border: solid #fff700;
+        background-color: rgb(0, 90, 126);
+        width: 80vw;
+    }
+
+    .contact-card:hover {
+        box-shadow: 0px 0px 30px rgb(25, 9, 26);
+        transition: 0.5s;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+        gap: 20px;
+    }
+
+    label {
+        color: #cec700;
+    }
+
+    input {
+        border-radius: 5px;
+        border-color: #e0e0e0;
+        background-color: #fafafa;
+    }
+
+    #submit {
+        background-color: #cec700;
+        padding: 5px 15px 5px 15px;
+    }
+
+    #submit:hover {
+        background-color: #cec700;
+        padding: 10px 25px 10px 25px;
+        box-shadow: 0px 0px 10px rgb(25, 9, 26);
+        transition: 0.5s;
+    }
+
+    #contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2em;
+
+    }
+
+    #contact-me {
+        padding-top: 2em;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -193,6 +410,8 @@ section p {
 
     /* reglas de CSS para education */
 
+
+
     #education {
         display: flex;
         flex-direction: column;
@@ -293,7 +512,6 @@ section p {
         text-align: center;
         align-items: center;
         justify-content: center;
-        gap: 20px;
     }
 
     .contact-card {
@@ -316,11 +534,11 @@ section p {
         margin: 50px;
         gap: 20px;
     }
-    
+
     label {
         color: #cec700;
     }
-    
+
     input {
         border-radius: 5px;
         border-color: #e0e0e0;
@@ -342,10 +560,6 @@ section p {
     #contact-info {
         display: flex;
         justify-content: space-between;
-    }
-
-    table {
-        width: 100%;
     }
 
     #contact-me {
