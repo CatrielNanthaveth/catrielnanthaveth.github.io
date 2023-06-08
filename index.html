@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="form.js"></script>
 </head>
 
 <body>
@@ -195,18 +196,20 @@
     </section>
 
     <section id="contact">
-        <h1>¡Contactémonos!</h1>
+        <h1 id="contact-title">¡Contactémonos!</h1>
         <section id="contact-info">
             <div class="contact-card">
                 <h2>Si querés que nos contactemos...</h2>
-                <form>
+                <form id="contact-form">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name">
                     <label for="mail">Correo Electrónico:</label>
                     <input type="email" id="mail" name="mail">
+                    <label for="mail">Sueldo ofrecido (en ARS):</label>
+                    <input type="number" id="salary" name="salary">
                     <label for="message">Mensaje:</label>
                     <textarea style="resize: none;" id="message" name="message" rows="5" cols="30" placeholder="¡Envíame un mensaje!"></textarea>
-                    <input type="submit" id="submit">
+                    <button id="submit">Enviar</button>
                 </form>
             </div>
     

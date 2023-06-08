@@ -42,7 +42,7 @@ body {
 }
 
 body>section {
-    height: calc(100vh - 4em);
+    min-height: calc(100vh - 4em);
 }
 
 #home {
@@ -77,6 +77,10 @@ section p {
     color: #cec700;
     font-size: large;
     margin: 10px;
+}
+
+.error {
+    border-color: red;
 }
 
 @media screen and (max-width: 1023px) {
@@ -556,6 +560,10 @@ section p {
 
     #contact-me {
         padding-top: 2em;
+    }
+
+    #contact-title {
+        margin-top: 80px;
     }
 
 }
