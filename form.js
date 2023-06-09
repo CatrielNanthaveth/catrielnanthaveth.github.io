@@ -7,10 +7,13 @@ function main() {
     const salary = document.getElementById("salary");
     const message = document.getElementById("message");
 
+    const btn = document.getElementById('btn');
     const tbody = document.getElementById("tbody");
 
     let dataArr = [];
     let isValid = false;
+    let is_ascendant = false;
+
 
 
     form.addEventListener('submit', (e) => {
@@ -27,6 +30,7 @@ function main() {
 
         const messageValue = message.value;
         const messageError = message.nextElementSibling;
+
 
         if (mailValue === '') {
             mail.classList.add('error');
@@ -68,17 +72,42 @@ function main() {
                 message: messageValue
             });
 
+            addInfo();
+
+            alert('enviado!');
+        } else {
+            alert('corrige!');
+        }
+    });
+
+    btn.addEventListener('click', (e) => {
+        is_ascendant = !is_ascendant;
+        if (is_ascendant) {
+            dataArr.sort((a, b) => a.salary - b.salary);
+        } else {
+            dataArr.sort((a, b) => b.salary - a.salary);
+        }
+        addInfo();
+    });
+
+    function addInfo() {
+
+        while (tbody.hasChildNodes()) {
+            tbody.removeChild(tbody.firstChild);
+        }
+
+        dataArr.map((obj) => {
             let th = document.createElement('th');
             th.setAttribute('scope', 'row');
-            th.innerText = dataArr.length;
+            th.innerText = dataArr.indexOf(obj) + 1;
             let td1 = document.createElement('td');
-            td1.innerText = nameValue;
+            td1.innerText = obj.username;
             let td2 = document.createElement('td');
-            td2.innerText = salaryValue;
+            td2.innerText = obj.salary;
             let td3 = document.createElement('td');
-            td3.innerText = Math.round(salaryValue / 484);
+            td3.innerText = Math.round(obj.salary / 484);
             let td4 = document.createElement('td');
-            td4.innerText = Math.round(salaryValue / 526);
+            td4.innerText = Math.round(obj.salary / 526);
 
             let tr = document.createElement('tr');
 
@@ -89,12 +118,9 @@ function main() {
             appendedTr.appendChild(td2);
             appendedTr.appendChild(td3);
             appendedTr.appendChild(td4);
-            console.log("holaaaa")
-            alert('enviado!');
-        } else {
-            alert('corrige!');
-        }
-    });
+
+        })
+    }
 
 
     mail.addEventListener('input', (e) => {

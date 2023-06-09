@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Catriel Nanthaveth</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/66a33b3e0c.js" crossorigin="anonymous"></script>
     <script src="form.js"></script>
 </head>
@@ -20,19 +20,19 @@
 
         <ul id="header-list">
             <li class="nav-list">
-                <a href="#home" class="nav-link link">Inicio</a>
+                <a href="#home" class="nav-link-manual link-manual">Inicio</a>
             </li>
             <li class="nav-list">
-                <a href="#education" class="nav-link link">Educación</a>
+                <a href="#education" class="nav-link-manual link-manual">Educación</a>
             </li>
             <li class="nav-list">
-                <a href="#technologies" class="nav-link link">Tecnologías</a>
+                <a href="#technologies" class="nav-link-manual link-manual">Tecnologías</a>
             </li>
             <li class="nav-list">
-                <a href="#projects" class="nav-link link">Proyectos</a>
+                <a href="#projects" class="nav-link-manual link-manual">Proyectos</a>
             </li>
             <li class="nav-list">
-                <a href="#contact" class="nav-link link">Contactame</a>
+                <a href="#contact" class="nav-link-manual link-manual">Contactame</a>
             </li>
         </ul>
 
@@ -51,14 +51,14 @@
                 lógica a través de lectura y ejercicios mentales.
             </p>
             <div id="icons">
-                <a href="https://github.com/CatrielNanthaveth" class="raise link" target="_blank">
+                <a href="https://github.com/CatrielNanthaveth" class="raise link-manual" target="_blank">
                     <i class="fa-brands fa-square-github fa-2xl"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/catriel-nanthaveth/" class="raise link" target="_blank">
+                <a href="https://www.linkedin.com/in/catriel-nanthaveth/" class="raise link-manual" target="_blank">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
                 </a>
                 <a href="https://drive.google.com/file/d/1NznWxLxxTDQxsEWU5s1Rz6d7YvknVp7j/view?usp=sharing"
-                    class="raise link" target="_blank">
+                    class="raise link-manual" target="_blank">
                     <i class="fa-regular fa-file fa-2xl"></i>
                 </a>
             </div>
@@ -68,10 +68,10 @@
     <section id="education">
         <h2>Educación</h2>
 
-        <div id="cards">
-            <article class="card">
+        <div id="my-cards">
+            <article class="my-card">
                 <h3>Universidad Nacional del Oeste | Marzo 2021 - Presente</h3>
-                <article class="card-info">
+                <article class="my-card-info">
                     <p>Lic. en Informática</p>
                     <a
                         href="https://docs.google.com/spreadsheets/d/1DFkDl9nm-FCSDO-U11OGktZ0a03P9fLSZm6E57gVRlo/edit#gid=0">Progreso
@@ -80,18 +80,18 @@
                 </article>
             </article>
 
-            <article class="card">
+            <article class="my-card">
                 <h3>Universidad Siglo 21 | Septiembre 2022 - Diciembre 2022</h3>
-                <article class="card-info">
+                <article class="my-card-info">
                     <p>React.js</p>
                     <p>Enfocado en React.js y bibliotecas para el desarrollo front-end. Desarrollé una landing page para
                         una ONG ficticia con un equipo de trabajo basado en Scrum.</p>
                 </article>
             </article>
 
-            <article class="card">
+            <article class="my-card">
                 <h3>FREECODECAMP | Abril 2022 - Agosto 2022</h3>
-                <article class="card-info">
+                <article class="my-card-info">
                     <p>Responsive Web Design - Aprendí HTML + CSS responsivo.</p>
                     <p>JavaScript Algorithms and Data Structures - Aprendí JavaScript y resolví algoritmos.</p>
                     <p>Front End Development Libraries - Aprendí React.js y otras bibliotecas.</p>
@@ -199,8 +199,10 @@
     <section id="contact">
         <h2 id="contact-title">¡Contactémonos!</h2>
         <section id="contact-info">
-            <div class="contact-card">
+            <div class="contact-my-card">
                 <h3>Si querés que nos contactemos...</h3>
+
+                <!-- Por favor no vuelva a exigirnos que usemos bootstrap es la librería más horrible, poco eficiente y llena de malas prácticas que existe y la detesto con todo mi corazón disculpe que no la use mucho pero es que me parece nefasta-->
                 <form id="contact-form">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name">
@@ -210,11 +212,11 @@
                     <input type="number" id="salary" name="salary">
                     <label for="message">Mensaje:</label>
                     <textarea style="resize: none;" id="message" name="message" rows="5" cols="30" placeholder="¡Envíame un mensaje!"></textarea>
-                    <button id="submit">Enviar</button>
+                    <button id="submit" class="btn btn-light">Enviar</button>
                 </form>
             </div>
     
-            <div class="contact-card">
+            <div class="contact-my-card">
                 <h3>Si querés contactarme vos a mí...</h3>
                 <section id="contact-me">
                     <article>
@@ -240,8 +242,10 @@
 
     <section id="table">
         <h2>¡Otras ofertas!</h2>
+        
+        <button id="btn" class="btn btn-primary">Reordenar</button>
 
-        <table class="table table-striped">
+        <table id="table-my-card" class="table table-striped">
             <thead>
               <tr>
                 <th scope="col">#</th>
