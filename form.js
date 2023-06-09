@@ -75,6 +75,7 @@ function main() {
             addInfo();
 
             alert('enviado!');
+            form.reset();
         } else {
             alert('corrige!');
         }
