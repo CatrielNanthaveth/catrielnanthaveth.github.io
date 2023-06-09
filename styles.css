@@ -65,6 +65,10 @@ body>section {
     background-color: rgb(0, 90, 126);
 }
 
+#table {
+    background-color: rgb(24, 145, 192);
+}
+
 a:any-link {
     text-decoration: none;
 }
@@ -81,6 +85,11 @@ section p {
 
 .error {
     border-color: red;
+}
+
+.text-error {
+    color: red;
+    font-size: x-small;
 }
 
 @media screen and (max-width: 1023px) {
@@ -566,4 +575,25 @@ section p {
         margin-top: 80px;
     }
 
+    #submit {
+        background-color: #cec700;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border-color: none;
+    }
+
+    #submit:hover {
+        background-color: #cec700;
+        padding: 10px 25px;
+        box-shadow: 0px 0px 10px rgb(25, 9, 26);
+        transition: 0.5s;
+    }
+
+    #table {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
 }

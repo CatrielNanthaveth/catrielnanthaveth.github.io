@@ -7,47 +7,92 @@ function main() {
     const salary = document.getElementById("salary");
     const message = document.getElementById("message");
 
+    const tbody = document.getElementById("tbody");
+
     let dataArr = [];
     let isValid = false;
+
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const mailValue = mail.value;
+        const mailError = mail.nextElementSibling;
+
         const nameValue = username.value;
+        const nameError = username.nextElementSibling;
+
         const salaryValue = salary.value;
+        const salaryError = salary.nextElementSibling;
+
         const messageValue = message.value;
+        const messageError = message.nextElementSibling;
 
         if (mailValue === '') {
             mail.classList.add('error');
             showError(mail, '* Requerido');
+        }
+        if (mailError && mailError.classList.contains('text-error')) {
+            mailError.remove();
         }
 
         if (nameValue === '') {
             username.classList.add('error');
             showError(username, '* Requerido');
         }
+        if (nameError && nameError.classList.contains('text-error')) {
+            nameError.remove();
+        }
 
         if (salaryValue === '') {
             salary.classList.add('error');
             showError(salary, '* Requerido');
+        }
+        if (salaryError && salaryError.classList.contains('text-error')) {
+            salaryError.remove();
         }
 
         if (messageValue === '') {
             message.classList.add('error');
             showError(message, '* Requerido');
         }
+        if (messageError && messageError.classList.contains('text-error')) {
+            messageError.remove();
+        }
 
         if (isValid) {
-            alert('enviado!');
             dataArr.push({
                 username: nameValue,
                 mail: mailValue,
                 salary: salaryValue,
                 message: messageValue
             });
+
+            let th = document.createElement('th');
+            th.setAttribute('scope', 'row');
+            th.innerText = dataArr.length;
+            let td1 = document.createElement('td');
+            td1.innerText = nameValue;
+            let td2 = document.createElement('td');
+            td2.innerText = salaryValue;
+            let td3 = document.createElement('td');
+            td3.innerText = Math.round(salaryValue / 484);
+            let td4 = document.createElement('td');
+            td4.innerText = Math.round(salaryValue / 526);
+
+            let tr = document.createElement('tr');
+
+            let appendedTr = tbody.appendChild(tr);
+
+            appendedTr.appendChild(th);
+            appendedTr.appendChild(td1);
+            appendedTr.appendChild(td2);
+            appendedTr.appendChild(td3);
+            appendedTr.appendChild(td4);
+            console.log("holaaaa")
+            alert('enviado!');
         } else {
-            alert('corrige!')
+            alert('corrige!');
         }
     });
 
